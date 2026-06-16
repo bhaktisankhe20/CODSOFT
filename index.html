@@ -1,117 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Calculator</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    
-    <header>
-        <div class="logo">My Portfolio</div>
+<div class="calculator">
 
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <input type="text" id="display" readonly>
 
-    
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hello, I'm <span>Bhakti Sankhe</span></h1>
-            <p>Aspiring Web Developer | Designer | Programmer</p>
-            <a href="#contact" class="btn">Hire Me</a>
-        </div>
-    </section>
+    <div class="buttons">
 
-    
-    <section id="about" class="about">
-        <div class="about-image">
-            <img src=profile.jpeg alt="Profile Image">
-        </div>
+        <button class="operator" onclick="clearDisplay()">AC</button>
+        <button class="operator" onclick="deleteLast()">⌫</button>
+        <button class="operator" onclick="appendValue('%')">%</button>
+        <button class="operator" onclick="appendValue('/')">÷</button>
 
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p>
-                I am a passionate web developer with knowledge of HTML, CSS,
-                JavaScript, and responsive web design. I enjoy creating
-                attractive and user-friendly websites.
-            </p>
-        </div>
-    </section>
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button class="operator" onclick="appendValue('*')">×</button>
 
-    
-    <section id="skills" class="skills">
-        <h2>My Skills</h2>
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button class="operator" onclick="appendValue('-')">−</button>
 
-        <div class="skill-box">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">React</div>
-            <div class="skill">Python</div>
-            <div class="skill">Java</div>
-        </div>
-    </section>
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button class="operator" onclick="appendValue('+')">+</button>
 
-  
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
+        <button class="zero" onclick="appendValue('0')">0</button>
+        <button onclick="appendValue('.')">.</button>
+        <button class="equal" onclick="calculate()">=</button>
 
-        <div class="project-container">
+    </div>
 
-            <div class="project-card">
-                <img src=portfolio.jpg alt="">
-                <h3>Portfolio Website</h3>
-                <p>Personal portfolio website using HTML and CSS.</p>
-            </div>
+</div>
 
-            <div class="project-card">
-                <img src=localapp.jpeg alt="">
-                <h3>Local Discovery food Application</h3>
-                <p> A web application that helps users discover nearby spots using Flutter. </p>
-            </div>
-
-            <div class="project-card">
-                <img src=scrapcollector.jpeg alt="">
-                <h3>The scrapper Collector </h3>
-                <p>The Scrapper Collector application using HTML, CSS, and REACT. </p>
-            </div>
-
-        </div>
-    </section>
-
-    
-    <section id="resume" class="resume">
-        <h2>Resume</h2>
-        <p>Download my resume below.</p>
-
-        <a href="myresume.pdf" download class="btn">
-            Download Resume
-        </a>
-    </section>
-
-    
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-
-        <p>Email: bhaktisankhe12345@gmail.com</p>
-        <p>Phone: +91 8767390442</p>
-    </section>
-
-    
-    <footer>
-        <p>© 2025 Bhakti Sankhe. All Rights Reserved.</p>
-    </footer>
+<script src="script.js"></script>
 
 </body>
 </html>
